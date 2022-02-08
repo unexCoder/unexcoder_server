@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %> 
+
+<body>
+    <% const num = Math.random() %> 
+    <div class="main-container">
+        <%- include('./partials/header.ejs') %> 
+        <nav class="main-navbar">
+            <ul>
+                <li><a href="/music">Music</a></li>
+                <li><a href="/visuals">Visuals</a></li>
+                <li><a href="/writes">Writes</a></li>
+            </ul>
+        </nav>
+        <dic class="content">
+            <p><%= num %> </p>
+        </dic>
+        <%- include('./partials/footer.ejs') %> 
+    </div>
+</body>
+</html>

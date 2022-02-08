@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %> 
+
+<body>
+    <div class="main-container">
+        <%- include('./partials/header.ejs') %> 
+        <%- include('./partials/nav.ejs') %> 
+        <dic class="content">
+            <h2> The \unexCoder server </h1>
+            <h2>Public API Routes</h2>
+            <h4>GET /api/albums</h4>
+            <h4>GET /api/albumById/:id</h4>
+            <h4>GET /api/albumByTitle/:title</h4>
+            <h4>GET /api/albumByYear/:year</h4>
+            <h4>GET /api/albumByTags/?tags=tag...</h4>
+ 
+        </dic>
+        <%- include('./partials/footer.ejs') %> 
+    </div>
+</body>
+</html>

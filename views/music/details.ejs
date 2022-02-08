@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head.ejs') %> 
+
+<body>
+    <div class="main-container">
+        <%- include('../partials/header.ejs') %> 
+        <%- include('../partials/nav.ejs') %> 
+        
+        <div class="content">
+            <% if (data) { %>
+                <article class="card">
+                    <a href="/api/albumById/<%= data._id%>"><h4><%=  data.title %> </h4></a>
+                    <h4><%=  data.year %> </h4>
+                    <h4><%=  data.genre %> </h4>
+                    <% data.tags.forEach(tag => { %>
+                        <spam> <a href="/api/albumByTags/?tags=<%= tag %>">#<%= tag %> </a> </spam>
+                    <% }) %>
+                    
+                    <h4>Tracks:</h4>
+                    <ol class="list-item">
+                    <% data.tracks.forEach(track => { %>
+                            <li> <a href="/track"> <%= track %> </a> </li>
+                    <% }) %>
+                    </ol>
+
+                </article>                
+            <% } else { %>
+                <p>This data is not available</p>
+            <% } %>
+        </div>
+        <%- include('../partials/footer.ejs') %> 
+    </div>
+
+</body>
+</html>
